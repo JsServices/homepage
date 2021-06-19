@@ -1,13 +1,13 @@
 import Navbar from "./navbar";
-import Footer from "./footer"
+import Footer from "./footer";
 
 export default function wrapper(props) {
 	return (
 		<>
-			<div className="flex flex-col min-h-screen bg-gray-900">
+			<div className="flex flex-col min-h-screen bg-gray-900 md:px-1">
 				<Navbar name={props.name} />
 					<div className="flex-1">
-						<div className="max-w-screen-xl mx-auto text-gray-200">
+						<div className="max-w-screen-xl mx-auto text-gray-200 pt-4">
 							{props.children}
 						</div>
 						
