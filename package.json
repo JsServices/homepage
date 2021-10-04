@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "heroicons": "^1.0.4",
+    "@heroicons/react": "^1.0.4",
     "next": "^11.0.0",
     "nightwind": "^1.1.11",
     "react": "^17.0.1",
