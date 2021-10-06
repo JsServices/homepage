@@ -34,7 +34,7 @@ export default function navbar(props) {
 				alt="Wave Studios Logo"
 			  />
 		  </LocLink>
-		  <ul className="gap-8 flex text-gray-300">
+		  <ul className="space-x-8 flex text-gray-300">
 			<li className="quick-link">JSBoard</li>
 			<li className="quick-link">Case Studys</li>
 			<li className="quick-link">Open Source</li>

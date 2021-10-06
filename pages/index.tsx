@@ -25,7 +25,7 @@ export default function homepage() {
         </div>
         <div className="space-y-44 mb-44">
           <Box name="JSBoard" image="/jsboard-website.png" site="/jsboard" btn1="Learn More" btn2={false} linkTo="/jsboard"  left={false}>
-            Imagine a free, open source forums software, built for the modern web that doesn't take 10 hours to install the packages. Introducing JSBoard. A modern forums solution but for the modern web. Coming early 2022. 
+            Imagine a free, open source forums software, built for the modern web that doesn't take 10 hours to install the packages. Introducing JSBoard. A modern forums solution but for the modern web. Coming 2022. 
           </Box>
           <Box name="Quartz Studios" image="/quartz-website.png" site="https://quartzstudios.net" left={true} btn1="Case Study" btn2={true} linkTo="/case-studys/quartzstudios">
             Quartz Studios is a MineCraft server creation studio that creates high-quality servers, and needed a similarly high-quality, professional website to match. Starting with a clean front page that will update to a playercounter once they release, we carefully handcrafted a unique design to show the care and effort put into their creations.
