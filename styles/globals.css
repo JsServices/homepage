@@ -2,6 +2,19 @@
 
 
 .btn {
-    @apply px-6 py-3 focus:outline-none hover:bg-opacity-70 transition;
+    @apply px-6 py-3 focus:outline-none hover:bg-opacity-75 transition select-none duration-[400ms];
 }
+
+.tooltip {
+    @apply invisible absolute;
+  }
+  
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50;
+  }
+
+.quick-link {
+    @apply cursor-pointer select-none hover:opacity-75 transition;
+}
+  
 
