@@ -2,7 +2,7 @@ import Head from "next/head";
 import { LocLink } from "./misc";
 import nightwind from "nightwind/helper";
 import React, { useState, useEffect } from "react";
-import { SparklesIcon, SunIcon, XIcon } from "@heroicons/react/outline";
+import { SparklesIcon, SunIcon, XIcon } from "@heroicons/react/outline"
 
 
 
@@ -20,7 +20,6 @@ export default function navbar(props) {
 	<>
 	  <Head>
 			<title>{pageName}</title>
-			<script dangerouslySetInnerHTML={{ __html: nightwind.init() }} />
 	  </Head>
 		<Contact />
 	  <nav className="sticky top-0 z-30 bg-opacity-50 h-[4.5rem] bg-gray-900 backdrop-filter backdrop-blur w-full">
