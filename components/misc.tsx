@@ -42,14 +42,21 @@ export function Box(props: {children: any, linkTo: string, name: string, left: b
             </div>
             <a href={props.site} target="_blank" className="!rounded-xl">
               <Image 
-                className="!rounded-xl !hover:rounded-xl hover:scale-110 transition duration-1000"
+                className="!rounded-xl !hover:rounded-xl hover:scale-110 transform transition duration-1000 lmao-next-image-bad"
                 src={props.image}
                 width={600}
                 height={350}         
                 quality={100}
                 alt="Example image"
+                //layout="fixed"
               />
             </a>
+            <style jsx global>{`
+              .lmao-next-image-bad:hover {
+                border-radius: 0.75rem;
+              }
+            `}
+            </style>
           </div>
 		</>
 	)

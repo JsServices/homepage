@@ -11,7 +11,10 @@ module.exports = {
           700: "#34678c", //normal color for branding (dark) "Delphinium Blue" 
           900: "#0a0b0d", //for dark theme "Clean Black"
         },
-      }
+      },
+      screens: {
+        '3xl': '2800px',
+      },
     },
   },
   variants: {

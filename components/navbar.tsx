@@ -22,7 +22,7 @@ export default function navbar(props) {
 			<title>{pageName}</title>
 	  </Head>
 		<Contact />
-	  <nav className="sticky top-0 z-30 bg-opacity-50 h-[4.5rem] bg-gray-900 backdrop-filter backdrop-blur w-full">
+	  <nav className="sticky top-0 z-30 bg-opacity-50 h-[4.5rem] bg-gray-900 backdrop-filter backdrop-blur w-full px-1">
 		<div className="flex h-full items-center mx-auto justify-between max-w-screen-xl px-4 border-b-2 border-opacity-50 border-gray-400 text-gray-200 font-semibold">
 		  <LocLink href="/">
 			  <img
