@@ -26,7 +26,7 @@ export function Box(props: {children: any, linkTo: string, name: string, left: b
               <p className="mt-4">{props.children}</p>
               
               <div className="my-6 flex items-center space-x-4">
-                <LocLink href={props.linkTo} className="btn bg-[#1467b5] rounded-lg font-semibold text-gray-300 dark:text-gray-100">
+                <LocLink href={props.linkTo} className="btn bg-[#1467b5] rounded-lg font-semibold dark:text-gray-300 text-gray-100">
                   {props.btn1}
                 </LocLink>
 								{props.btn2 ? 

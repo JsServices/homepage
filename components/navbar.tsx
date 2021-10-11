@@ -22,8 +22,8 @@ export default function navbar(props) {
 			<title>{pageName}</title>
 	  </Head>
 		<Contact />
-	  <nav className="sticky top-0 z-30 bg-opacity-50 h-[4.5rem] bg-gray-900 backdrop-filter backdrop-blur w-full px-1">
-		<div className="flex h-full items-center mx-auto justify-between max-w-screen-xl px-4 border-b-2 border-opacity-50 border-gray-400 text-gray-200 font-semibold">
+	  <nav className="sticky top-0 z-30 bg-opacity-50 h-[4.5rem] bg-gray-50 backdrop-filter backdrop-blur w-full px-1">
+		<div className="flex h-full items-center mx-auto justify-between max-w-screen-xl px-4 border-b-2 border-opacity-50 border-gray-500 text-gray-700 font-semibold">
 		  <LocLink href="/">
 			  <img
 				className="rounded-full hover:ring transition h-10" 
@@ -34,7 +34,7 @@ export default function navbar(props) {
 				alt="Wave Studios Logo"
 			  />
 		  </LocLink>
-		  <ul className="space-x-8 flex text-gray-300">
+		  <ul className="space-x-8 flex text-gray-600">
 			<li className="quick-link">JSBoard</li>
 			<li className="quick-link">Case Studys</li>
 			<li className="quick-link">Open Source</li>
@@ -88,22 +88,22 @@ export default function navbar(props) {
 		if (contactOpen) {
 			return (
 				<>
-					<div className="z-40 inset-0 fixed backdrop-filter backdrop-blur-3xl backdrop-saturate-150 bg-branding-900 bg-opacity-40">
+					<div className="z-40 inset-0 fixed backdrop-filter backdrop-blur-3xl backdrop-saturate-150 bg-branding-50 bg-opacity-40">
 						<div className="h-screen flex flex-grow justify-center items-center">
-							<div className="bg-gray-800 rounded-md px-8 py-5 relative">
+							<div className="bg-gray-100 rounded-md px-8 py-5 relative">
 								<XIcon
-									className="absolute right-2 top-3 w-6 h-6 p-1 hover:bg-coolGray-800 hover:bg-opacity-40 rounded cursor-pointer text-gray-300 hover:text-branding-700"
+									className="absolute right-2 top-3 w-6 h-6 p-1 hover:bg-coolGray-100 hover:bg-opacity-40 rounded cursor-pointer text-gray-600 hover:text-branding-200"
 									onClick={() => setContactOpen(false)}
 								/>
 								<h1 className="text-2xl font-medium text-center">
 									Change Your Username
 								</h1>
-								<h2 className="text-sm text-gray-400 text-center mb-6">
+								<h2 className="text-sm text-gray-500 text-center mb-6">
 									Choose a brand new username for your account!
 								</h2>
 								<form className="flex flex-col w-full">
 									<label className="flex flex-col">
-										<span className="text-xs tracking-tight font-medium uppercase text-gray-500 mb-1">
+										<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
 											New Username
 										</span>
 										<input
@@ -119,11 +119,11 @@ export default function navbar(props) {
 									</label>
 									<input
 										type="reset"
-										className="link bg-coolGray-700 bg-opacity-0 cursor-pointer focus:ring rounded mr-auto"
+										className="link cursor-pointer focus:ring rounded mr-auto mt-1"
 									/>
 									<input
 										type="submit"
-										className="ml-auto bg-coolGray-700 bg-opacity-0 btn btn-blue"
+										className="ml-auto btn btn-blue"
 									/>
 								</form>
 							</div>

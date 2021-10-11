@@ -6,7 +6,7 @@
 }
 
 .tooltip {
-    @apply hidden absolute;
+    @apply hidden absolute select-none;
   }
   
   .has-tooltip:hover .tooltip {
@@ -18,5 +18,5 @@
 }
 
 .link {
-  @apply hover:underline text-blue-400 dark:text-blue-900 font-medium cursor-pointer;
+  @apply hover:underline dark:text-blue-400 text-blue-900 font-medium cursor-pointer;
 }
