@@ -49,21 +49,22 @@ export default function navbar(props) {
 				className={
 					"p-4 nightwind-prevent select-none relative rounded-full ml-2 transition cursor-pointer duration-700 hover:duration-500 " +
 					(darkModeLoc
-					? "bg-blue-800 hover:rotate-12"
-					: "bg-yellow-400 rotate-180 hover:rotate-90")
+					? "bg-yellow-400 rotate-180 hover:rotate-90" : 
+					"bg-blue-800 hover:rotate-12"
+					)
 				}
 				onClick={() => setDarkModeLoc(!darkModeLoc)}
 				>
 				<SparklesIcon
 					className={
 					"w-6 h-6 nightwind-prevent absolute bottom-1 right-1 transition duration-700 " +
-					(darkModeLoc ? "" : "hidden")
+					(darkModeLoc ? "hidden" : "")
 					}
 				/>
 				<SunIcon
 					className={
 					"w-6 h-6 nightwind-prevent absolute bottom-1 right-1 transition duration-700 text-gray-900 " +
-					(darkModeLoc ? "hidden" : "")
+					(darkModeLoc ? "" : "hidden")
 					}
 				/>
 				</button>
