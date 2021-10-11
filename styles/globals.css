@@ -6,15 +6,17 @@
 }
 
 .tooltip {
-    @apply invisible absolute;
+    @apply hidden absolute;
   }
   
   .has-tooltip:hover .tooltip {
-    @apply visible z-40;
+    @apply md:block z-40;
   }
 
 .quick-link {
     @apply cursor-pointer select-none hover:opacity-75 transition;
 }
 
-
+.link {
+  @apply hover:underline text-blue-400 dark:text-blue-900 font-medium cursor-pointer;
+}
