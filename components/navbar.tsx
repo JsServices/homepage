@@ -12,7 +12,7 @@ export default function navbar(props) {
 
 	useEffect(function () {
 	  setDarkModeLoc(
-		(window.localStorage.getItem("nightwind-mode") ?? "light") == "light"
+		(window.localStorage.getItem("nightwind-mode") ?? "dark") == "light"
 	  );
 	}, []);
   const pageName = (props.name + " | Wave Studios") || "Wave Studios";
@@ -43,7 +43,7 @@ export default function navbar(props) {
 			<li className="quick-link" onClick={() => setContactOpen(true)}>Hire Us!</li>
 			<li
 				className={"has-tooltip relative nightwind-prevent " + props.className}
-				onClick={() => nightwind.enable(darkModeLoc)}
+				onClick={() => nightwind.toggle()}
 			>
 				<button
 				className={
@@ -75,7 +75,7 @@ export default function navbar(props) {
 					: "text-gray-900 bg-gray-300 bg-opacity-50")
 				}
 				>
-				Switch to {darkModeLoc ? "light" : "dark"} mode
+				Switch to {darkModeLoc ? "dark" : "light"} mode
 				</span>
 			</li>
 
