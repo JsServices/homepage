@@ -71,7 +71,7 @@ export default function navbar(props) {
 				<span
 				className={
 					"tooltip nightwind-prevent rounded font-medium shadow-lg p-1 backdrop-filter backdrop-blur-3xl backdrop-saturate-150  mt-14 whitespace-nowrap -left-28 2xl:-left-14 " +
-					(darkModeLoc
+					(!darkModeLoc
 					? "text-gray-100 bg-gray-200 bg-opacity-30"
 					: "text-gray-900 bg-gray-300 bg-opacity-50")
 				}
@@ -96,35 +96,64 @@ export default function navbar(props) {
 									className="absolute right-2 top-3 w-6 h-6 p-1 hover:bg-coolGray-100 hover:bg-opacity-40 rounded cursor-pointer text-gray-600 hover:text-branding-200"
 									onClick={() => setContactOpen(false)}
 								/>
-								<h1 className="text-2xl font-medium text-center">
-									Change Your Username
+								<h1 className="text-2xl font-medium text-center text-gray-800">
+									Contact Us!
 								</h1>
-								<h2 className="text-sm text-gray-500 text-center mb-6">
-									Choose a brand new username for your account!
+								<h2 className="text-sm text-gray-500 text-center mb-6 lg:px-36">
+									Drop us a note. 
 								</h2>
-								<form className="flex flex-col w-full">
-									<label className="flex flex-col">
-										<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
-											New Username
-										</span>
-										<input
-											type="text"
-											placeholder={props.user}
-											className="rounded border-none focus:ring-0"
-											name="username"
-											maxLength={25}
-											minLength={3}
-											autoComplete="nickname"
-											required
-										/>
-									</label>
+								<form className="flex flex-col w-full" method="POST" data-netlify="true" name="contact">
+									<div className="space-y-3">
+										<label className="flex flex-col">
+											<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
+												Name
+											</span>
+											<input
+												type="text"
+												className="rounded border-none focus:ring-0"
+												name="name"
+												maxLength={25}
+												minLength={3}
+												autoComplete="name"
+												required
+											/>
+										</label>
+										<label className="flex flex-col">
+											<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
+												Email
+											</span>
+											<input
+												type="text"
+												className="rounded border-none focus:ring-0"
+												name="email"
+												maxLength={25}
+												minLength={3}
+												autoComplete="email"
+												required
+											/>
+										</label>
+										<label className="flex flex-col">
+											<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
+												Message
+											</span>
+											<textarea
+												className="rounded border-none focus:ring-0"
+												name="message"
+												maxLength={2000}
+												minLength={3}
+												required
+											/>
+										</label>
+									</div>
 									<input
 										type="reset"
-										className="link cursor-pointer focus:ring rounded mr-auto mt-1"
+										className="link cursor-pointer focus:ring rounded mr-auto mt-1 bg-transparent"
+										value="Clear"
 									/>
 									<input
 										type="submit"
-										className="ml-auto btn btn-blue"
+										className="ml-auto btn bg-blue-500 text-gray-700 font-bold rounded nightwind-prevent w-full px-auto mt-6 lg:mt-2 lg:w-auto"
+										value="Send"
 									/>
 								</form>
 							</div>

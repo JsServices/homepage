@@ -2,7 +2,7 @@
 
 
 .btn {
-    @apply px-6 py-3 focus:outline-none hover:bg-opacity-75 transition select-none duration-[400ms];
+    @apply px-6 py-3 focus:outline-none hover:bg-opacity-75 transition select-none duration-[400ms] cursor-pointer;
 }
 
 .tooltip {
@@ -18,5 +18,5 @@
 }
 
 .link {
-  @apply hover:underline dark:text-blue-400 text-blue-900 font-medium cursor-pointer;
+  @apply hover:underline text-blue-400 font-medium cursor-pointer;
 }
