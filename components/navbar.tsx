@@ -102,7 +102,7 @@ export default function navbar(props) {
 								<h2 className="text-sm text-gray-500 text-center mb-6 lg:px-36">
 									Drop us a note. 
 								</h2>
-								<form className="flex flex-col w-full" method="POST" data-netlify="true" name="contact">
+								<form className="flex flex-col w-full" method="POST" data-netlify="true" name="contact" action="/success">
 									<div className="space-y-3">
 										<label className="flex flex-col">
 											<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
