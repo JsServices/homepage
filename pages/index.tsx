@@ -18,7 +18,7 @@ export default function homepage() {
             <div className="hidden md:block transform -rotate-12 bg-gray-100 py-6 px-4 rounded bg-opacity-75">
               idk what to put here
             </div>
-            <div className="md:hidden absolute bottom-36 animate-bounce" onClick={() => scrollTo({
+            <div className="md:hidden absolute bottom-36 animate-bounce p-4" onClick={() => scrollTo({
               top: window.innerHeight,
               behavior: 'smooth'
             })}>

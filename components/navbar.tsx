@@ -4,12 +4,12 @@ import nightwind from "nightwind/helper";
 import React, { useState, useEffect } from "react";
 import { SparklesIcon, SunIcon, XIcon } from "@heroicons/react/outline"
 import ContactForm from "./contact"
+import Link from "next/link";
 
 
 
 export default function navbar(props) {
 	const [darkModeLoc, setDarkModeLoc] = useState(true);
-	const [contactOpen, setContactOpen] = useState(false);
 
 	useEffect(function () {
 	  setDarkModeLoc(
@@ -22,13 +22,12 @@ export default function navbar(props) {
 	  <Head>
 			<title>{pageName}</title>
 	  </Head>
-		<Contact />
 	  <nav className="sticky top-0 z-30 bg-opacity-50 h-[4.5rem] bg-gray-50 backdrop-filter backdrop-blur w-full px-1">
 		<div className="flex h-full items-center mx-auto justify-between max-w-screen-xl px-4 border-b-2 border-opacity-50 border-gray-500 text-gray-700 font-semibold">
 		  <LocLink href="/">
 			  <img
 				className="rounded-full hover:ring transition h-10" 
-				src="/logo.png"
+				src="/logos/wave.png"
 				width="40"
 				height="40"
 				//quality={90}
@@ -41,7 +40,7 @@ export default function navbar(props) {
 			<li className="quick-link">Open Source</li>
 		  </ul>
 		  <ul className="flex items-center gap-4">
-			<li className="quick-link" onClick={() => setContactOpen(true)}>Hire Us!</li>
+			<li className="quick-link"><Link href="/contact"><a>Hire Us!</a></Link></li>
 			<li
 				className={"has-tooltip relative nightwind-prevent " + props.className}
 				onClick={() => nightwind.toggle()}
@@ -86,31 +85,5 @@ export default function navbar(props) {
 	  </nav>
 	</>
   );
-  function Contact() {
-		if (contactOpen) {
-			return (
-				<>
-					<div className="z-40 inset-0 fixed backdrop-filter backdrop-blur-3xl backdrop-saturate-150 bg-branding-50 bg-opacity-40">
-						<div className="h-screen flex flex-grow justify-center items-center">
-							<div className="bg-gray-100 rounded-md px-8 py-5 relative">
-								<XIcon
-									className="absolute right-2 top-3 w-6 h-6 p-1 hover:bg-coolGray-100 hover:bg-opacity-40 rounded cursor-pointer text-gray-600 hover:text-branding-200"
-									onClick={() => setContactOpen(false)}
-								/>
-								<h1 className="text-2xl font-medium text-center text-gray-800">
-									Contact Us!
-								</h1>
-								<h2 className="text-sm text-gray-500 text-center mb-6 lg:px-36">
-									Drop us a note. 
-								</h2>
-								<ContactForm />
-							</div>
-						</div>
-					</div>
-				</>
-			)
-		} else {
-			return null;
-		}
-  }
+  
 }

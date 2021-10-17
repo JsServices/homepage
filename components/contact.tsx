@@ -1,47 +1,61 @@
 export default function Contact() {
     return (
         <>
-        <form name="contact" action="/success" method="POST" data-netlify="true">
+      <form className="flex flex-col w-full" method="POST" data-netlify="true" name="contact" action="/">
         <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label htmlFor="yourname">Your Name:</label>
-          <input type="text" name="name" id="yourname" />
-        </p>
-        <p>
-          <label htmlFor="youremail">Your Email: </label>{' '}
-          <input type="email" name="email" id="youremail" />
-        </p>
-        <p>
-          <label htmlFor="yourmessage">Message: </label>
-          <textarea name="message" id="yourmessage"></textarea>
-        </p>
-        <p>
-          <button type="submit" className="bg-green-500">Send</button>
-        </p>
-        <style jsx>{`
-          label {
-            font-size: 0.8rem;
-          }
-          input,
-          textarea {
-            width: 100%;
-            height: 40px;
-            border: none;
-            border-bottom: 1px solid #d6d6d6;
-            font-size: 1.3rem;
-          }
-          input:focus,
-          textarea:focus {
-            outline: 1px dotted #d6d6d6;
-          }
-          button {
-            padding: 20px;
-            color: white;
-            border-radius: 10px;
-            font-size: 1.3rem;
-          }
-        `}</style>
-      </form>
+									<div className="space-y-3">
+										<label className="flex flex-col">
+											<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
+												Name
+											</span>
+											<input
+												type="text"
+												className="rounded border-none focus:ring-0 p-0.5"
+												name="name"
+												maxLength={25}
+												minLength={3}
+												autoComplete="name"
+												required
+											/>
+										</label>
+										<label className="flex flex-col">
+											<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
+												Email
+											</span>
+											<input
+												type="text"
+												className="rounded border-none focus:ring-0 p-0.5"
+												name="email"
+												maxLength={25}
+												minLength={3}
+												autoComplete="email"
+												required
+											/>
+										</label>
+										<label className="flex flex-col">
+											<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">
+												Message
+											</span>
+											<textarea
+												className="rounded border-none focus:ring-0 p-0.5"
+												name="message"
+												maxLength={2000}
+												minLength={3}
+												required
+											/>
+										</label>
+									</div>
+									<input
+										type="reset"
+										className="link cursor-pointer focus:ring rounded mr-auto mt-1 bg-transparent"
+										value="Clear"
+									/>
+									<input
+										type="submit"
+										className="ml-auto btn bg-blue-500 text-gray-200 font-bold rounded nightwind-prevent w-full px-auto mt-6 lg:mt-2 lg:w-auto"
+										value="Send"
+									/>
+        </form>
       </>
     )
 }

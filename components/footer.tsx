@@ -68,7 +68,7 @@ export default function footer(props) {
 							<li className={"text-sm link " + (rssOpen ? "" : "hidden md:block")}><Link href="/resources/privacy"><a>Privacy Policy</a></Link></li>
 							<li className={"text-sm link " + (rssOpen ? "" : "hidden md:block")}><Link href="/resources/about"><a>Who we are</a></Link></li>
 							<li className={"text-sm link " + (rssOpen ? "" : "hidden md:block")}><Link href="/sitemap.xml"><a>Site Map</a></Link></li>
-							<li className={"text-sm link " + (rssOpen ? "" : "hidden md:block")}><Link href="/api-docs/intro"><a>API Documentation</a></Link></li>
+							<li className={"text-sm link " + (rssOpen ? "" : "hidden md:block")}><Link href="/branding"><a>Branding</a></Link></li>
 						</ul>
 					</div>
 				</div>
