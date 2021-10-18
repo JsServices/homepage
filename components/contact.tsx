@@ -1,8 +1,11 @@
 export default function Contact() {
     return (
         <>
-      <form className="flex flex-col w-full" method="POST" data-netlify="true" name="contact" action="/">
+      <form className="flex flex-col w-full" method="POST" data-netlify="true" name="contact" action="/" netlify-honeypot="reason">
         <input type="hidden" name="form-name" value="contact" />
+		<p className="hidden">
+			<label>Don’t fill this out if you’re human: <input name="reason" /></label>
+		</p>
 									<div className="space-y-3">
 										<label className="flex flex-col">
 											<span className="text-xs tracking-tight font-medium uppercase text-gray-400 mb-1">

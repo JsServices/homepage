@@ -2,13 +2,13 @@ import { DotsHorizontalIcon, CloudDownloadIcon } from "@heroicons/react/outline"
 import Image from "next/image";
 import Wrapper from "../components/wrapper";
 
-export default function () {
+export default function ddd() {
     return (
         <>
             <Wrapper name="Branding">
                 <div className="mx-4">
                 <h1 className="font-semibold text-5xl tracking-wide text-center md:text-left mt-6">Branding</h1>
-                <h2 className="font-light text-xl text-gray-600 max-w-2xl mt-2">We’re a fun project that loves to lean into the memes (just look at our code comments). That said, we're keen on keeping well-kempt. If you wanna use our art, keep it clean and forward it to us for approval. </h2>
+                <h2 className="font-light text-xl text-gray-600 max-w-2xl mt-2">We’re fun and love to lean into the memes (just look at our code comments). That said, we're keen on keeping well-kempt. If you wanna use our art, keep it clean and forward it to us for approval. </h2>
                 <section className="mt-16">
                     <h3 className="font-bold text-3xl tracking-wide text-center md:text-left">Our Logos</h3>
                     <p className="font-light text-xl text-gray-600 max-w-3xl mt-2">Please do not edit, change, distort, recolor, or reconfigure the our logos.</p>
