@@ -77,7 +77,7 @@ export default function homepage() {
             linkTo="/jsboard"
             left={false}
           >
-            Imagine a free, open source forums software, built for the modern
+            Imagine a free, open-source forums software, built for the modern
             web that doesn't take 10 hours to install the packages. Introducing
             JSBoard. A modern forums solution but for the modern web. Coming
             2022.
@@ -91,10 +91,10 @@ export default function homepage() {
             btn2={true}
             linkTo="/case-studys/quartzstudios"
           >
-            Quartz Studios is a MineCraft server creation studio that creates
+            Quartz Studios is a Minecraft server creation studio that creates
             high-quality servers, and needed a similarly high-quality,
             professional website to match. Starting with a clean front page that
-            will update to a playercounter once they release, we carefully
+            will update a playercounter, we carefully
             handcrafted a unique design to show the care and effort put into
             their creations.
           </Box>

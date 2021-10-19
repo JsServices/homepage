@@ -41,7 +41,7 @@ export default function jsboard() {
             </div>
             <h2 className=" text-center font-medium">
               JSBoard is a community-first forum software built for the modern
-              webb.
+              web.
             </h2>
           </div>
         </header>
