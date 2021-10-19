@@ -36,7 +36,7 @@ export default function navbar(props) {
 		  </LocLink>
 		  <ul className="space-x-8 flex text-gray-600">
 			<li className="quick-link"><Link href="/jsboard"><a>JSBoard</a></Link></li>
-			<li className="quick-link">Case Studys</li> 
+			<li className="quick-link">Case Studies</li> 
 			<li className="quick-link">Open Source</li>
 		  </ul>
 		  <ul className="flex items-center gap-4">
