@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         branding: {
-          50: "#baf5eb", //for light theme ""
+          50: "#baf5eb", //for light theme "Turquoise Snowfield"
           200: "#75c1c9", //normal color for branding (light) "Flax Blue" 
           700: "#34678c", //normal color for branding (dark) "Delphinium Blue" 
           900: "#0a0b0d", //for dark theme "Clean Black"
