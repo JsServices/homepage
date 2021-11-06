@@ -1,7 +1,9 @@
 import Wrapper from "../../components/wrapper";
 import Image from "next/image";
 import {
+  ArrowRightIcon,
   BookOpenIcon,
+  ChevronRightIcon,
   DotsHorizontalIcon,
   ExternalLinkIcon,
 } from "@heroicons/react/outline";
@@ -46,18 +48,9 @@ export default function jsboard() {
           </div>
         </header>
         <div>
-          <div className="space-y-16">
-            <section className="flex justify-between">
-              <div>
-                <h3 className="text-3xl tracking-wide font-medium">
-                  A better way to run a community
-                </h3>
-                <DotsHorizontalIcon className="h-8" />
-                <p className="text-gray-800 max-w-lg font-light text-lg">
-                  Easily allow users to engage with and grow your community. Create frictionless community support boards, connect users to people like them, post important announcements, and create a welcoming place for new and old users alike.
-                </p>
-              </div>
-              <div className="relative">
+          <div className="space-y-16 mt-10 mx-3">
+            <PromoBox name="A better way to run a community" desc="Easily allow users to engage with and grow your community. Create frictionless community support boards, connect users to people like them, post important announcements, and create a welcoming place for new and old users alike." button={<>Grow your community <ChevronRightIcon className="h-5 mt-[0.19rem] ml-1.5 group-hover:transform group-hover:translate-x-1 transition duration-300" /></>}>
+            <div className="relative">
                 <div className="bg-[#9c9ca4] p-[0.1rem] rounded-xl">
                   <div className="pt-3 px-3 pb-2 rounded-xl bg-black nightwind-prevent">
                     <Image
@@ -79,10 +72,29 @@ export default function jsboard() {
                   />
                 </div>
               </div>
-            </section>
+            </PromoBox>
+            
           </div>
         </div>
       </Wrapper>
     </>
+  );
+}
+
+function PromoBox(props) {
+  return (
+    <section className={"flex justify-between " + (props.backwards ? "flex-row-reverse" : "")}>
+              <div>
+                <h3 className="text-3xl tracking-wide font-medium">
+                  {props.name}
+                </h3>
+                <DotsHorizontalIcon className="h-8" />
+                <p className="text-gray-800 max-w-lg font-light text-lg">
+                  {props.desc}
+                </p>
+                <button className="btn flex group font-semibold tracking-wide mt-6 bg-[#1757e3] text-gray-200 nightwind-prevent rounded-md"> {props.button} </button>
+              </div>
+              {props.children}
+            </section>
   );
 }
