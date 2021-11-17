@@ -45,7 +45,7 @@ export default function navbar(props) {
 				className={"has-tooltip relative nightwind-prevent " + props.className}
 				onClick={() => nightwind.toggle()}
 			>
-				<button
+				<button name="Toggle Dark/Light theme"
 				className={
 					"p-4 nightwind-prevent select-none relative rounded-full ml-2 transition cursor-pointer duration-700 hover:duration-500 " +
 					(darkModeLoc

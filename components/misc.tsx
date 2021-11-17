@@ -30,7 +30,7 @@ export function Box(props: {children: any, linkTo: string, name: string, left: b
                   {props.btn1}
                 </LocLink>
 								{props.btn2 ? 
-                <a href={props.site} className="btn ring ring-[#1467b5] rounded-lg font-semibold flex hover:bg-[#1467b5]" target="_blank">
+                <a href={props.site} className="btn ring ring-[#1467b5] rounded-lg font-semibold flex hover:bg-[#1467b5]" target="_blank" rel="noopener noreferrer">
                   {/*TODO: Use heroions svg*/}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -40,7 +40,7 @@ export function Box(props: {children: any, linkTo: string, name: string, left: b
                 </a> : ""}
               </div>
             </div>
-            <a href={props.site} target="_blank" className="!rounded-xl">
+            <a href={props.site} target="_blank" className="!rounded-xl" rel="noopener noreferrer">
               <Image 
                 className="!rounded-xl !hover:rounded-xl hover:scale-110 transform transition duration-1000 lmao-next-image-bad"
                 src={props.image}
