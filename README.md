@@ -1,39 +1,47 @@
-# Homepage
+# WaveJS
+## IMPORTANT
+WaveJS is not currently production nor development ready, please do not use it unless you're fine with adding extra code to your project
 
-Here at Wave Studios we love open source, so thats why we made our website open source! Feel free to make feature requests, bug reports, or pull requests. Just keep these in mind:
+## What is WaveJS?
+WaveJS is a lightweight Web framework to create interactive sites eaisly and without much trouble
 
-- We use tailwindcss, so please don't use any normal css unless its required. If your making a button or want to style something across the website, use `@apply`
-- When creating a new file, make sure it has the `.tsx` extension and you don't use react components (see example below)
-
-✔️
-
-```js
-export default function test(props) {
-    const [profileOpen, setProfileOpen] = useState(true);
-    return (
-        <>
-            {/*Code Here*/}
-        </>
-    )
+## Syntax
+WaveJS uses a syntax similar to React JSX
+### Syntax Example
+```tsx
+@WJSPage({
+	title: "My WaveJS Site",
+	route: "/",
+})
+class MyWaveSite extends WJSApp {
+	render() {
+		return (
+			<>
+				<h2>Welcome to WaveJS</h2>
+			</>
+		);
+	}
 }
+
+// Same as above
+const MyFunction = () => {
+	return (
+		<>
+			<h2>Welcome to WaveJS</h2>
+		</>
+	);
+};
+WJS.page({ title: "My WaveJS Site", route: "/" }, MyFunction);
 ```
 
-❌
+## Setup
+All you need to do for a WaveJS app once dependencies are added is add this following line: `<div id="app"></div>`!
+Once you have done that WaveJS will automatically add the content inside the div
 
-```js
-export default class StaffCore extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            profileOpen: false,
-        }
-    }
-    render() {
-        <>
-            {/*Code Here*/}
-        </>
-    }
-}
-```
+## FAQ
+### How does WaveJS compare to frameworks like react, vue, and svelte?
+WaveJS lacks features that other frameworks offer but tried to make up for it with the size, 
+WaveJS is < 10 KiB compared to other frameworks which offer more features
 
-There are a few minor differances, the most obvious at a glance being state management.
+### How do I do routing with WaveJS?
+WaveJS currently doesn't have any built in routing. You can use your own routing system or wait for the offical router
