@@ -17,5 +17,5 @@
 	"jsxFactory": "WJS.h",
 	"jsxFragmentFactory": "WJS.f"
   },
-  "include": ["./src/pages/**.**", "./src/wavejs/**.**"]
+  "include": ["./src/pages/**.**", "./src/wavejs/**.**", "./vite-env.d.ts"]
 }

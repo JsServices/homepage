@@ -137,11 +137,7 @@ export class WaveJS {
 			typeof tagName === "function" &&
 			!(tagName instanceof DocumentFragment)
 		) {
-			if (attributes == null) {
-				return tagName();
-			} else {
-				return tagName(attributes);
-			}
+			return tagName(attributes ?? { children });
 		} else {
 			const element =
 				tagName instanceof DocumentFragment
@@ -170,7 +166,7 @@ export class WaveJS {
 						}
 						element.setAttribute(
 							attribue.toLowerCase() === "classname" ? "class" : attribue,
-							attributes[attribue]
+							attributes[attribue] as string
 						);
 					}
 				}

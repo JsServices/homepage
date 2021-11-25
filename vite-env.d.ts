@@ -20,8 +20,6 @@ declare namespace WJS {
 	): void
 }
 
-
-
 declare namespace JSX {
 	interface IntrinsicElements {
 		[elemName: string]: {
@@ -33,12 +31,11 @@ declare namespace JSX {
 		};
 	}
 	interface AttributeCollection {
-		[name: string]: string;
-		children: string;
+		[name: string]: unknown;
+		className?: string;
+		children?: string | string[];
 	}
 	interface IntrinsicAttributes extends AttributeCollection {
-		[name: string]: string;
-		children: string;
 	}
 	interface ElementAttributesProperty {
 		props: unknown;
