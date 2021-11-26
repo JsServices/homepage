@@ -1,10 +1,10 @@
-export function Box(props: {children: any, linkTo: string, name: string, left: string, btn1: string, btn2: string, site: string, image: string}) {
+export function Box(props: {desc: string, linkTo: string, name: string, left: string, btn1: string, btn2: string, site: string, image: string}) {
 	return (
 		<>
 			<div className={"flex flex-col-reverse place-items-center justify-between mx-4 lg:mx-0 " + (props.left == "yes" ? "md:flex-row-reverse" : "md:flex-row")}>
             <div className="max-w-lg flex flex-col">
               <h1 className="font-semibold text-4xl tracking-wide mt-5 lg:mt-0">{props.name}</h1>
-              <p className="mt-4">{props.children}</p>
+              <p className="mt-4">{props.desc}</p>
               
               <div className="my-6 flex items-center space-x-4">
                 <a href={props.linkTo} className="btn bg-[#1467b5] rounded-lg font-semibold dark:text-gray-300 text-gray-100">
