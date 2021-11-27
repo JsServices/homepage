@@ -1,7 +1,10 @@
 
 module.exports = {
   mode: 'jit',
-  purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+  // not sure why lukas did this
+  // purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+  // when this works
+  purge: ['./src/**/*.{js,ts,jsx,tsx,css}'],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
