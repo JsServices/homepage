@@ -4,20 +4,23 @@ declare namespace WJS {
 	function h(
 		tagName:
 			| string
-			| ((...args: (string | JSX.AttributeCollection)[]) => Element | DocumentFragment)
+			| ((
+					...args: (string | JSX.AttributeCollection)[]
+			  ) => Element | DocumentFragment)
 			| DocumentFragment,
 		attributes: JSX.AttributeCollection | null,
 		...children: string[]
-	): Element | DocumentFragment
+	): Element | DocumentFragment;
 
 	function page(
-		{
-		}: {
+		{}: {
 			title?: string;
 			route?: string;
 		},
 		page: () => unknown | string
-	): void
+	): void;
+
+	function useState<T>(initialValue: T): [() => T, (value: T) => void];
 }
 
 declare namespace JSX {
@@ -35,8 +38,7 @@ declare namespace JSX {
 		className?: string;
 		children?: string | string[];
 	}
-	interface IntrinsicAttributes extends AttributeCollection {
-	}
+	interface IntrinsicAttributes extends AttributeCollection {}
 	interface ElementAttributesProperty {
 		props: unknown;
 	}

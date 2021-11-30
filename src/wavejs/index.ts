@@ -74,6 +74,16 @@ export class WaveJS {
 			return r;
 		},
 	};
+	static useState = <T>(
+		initialValue: T,
+	) => {
+		let value = initialValue;
+		const setValue = (newValue: T) => {
+			value = newValue;
+			WaveJS.renderPage();
+		}
+		return [() => value, setValue];
+	}
 	static wjsPageCache: Map<
 		string,
 		{
@@ -103,7 +113,7 @@ export class WaveJS {
 		if (isCorrectRoute(route, window.location.pathname)) {
 			if (
 				page.prototype.render == undefined &&
-				page.prototype.renderRawHTML == undefined && 
+				page.prototype.renderRawHTML == undefined &&
 				page == undefined
 			) {
 				throw new Error("Page does not have render function");
@@ -118,7 +128,10 @@ export class WaveJS {
 		);
 		if (page == undefined) throw new Error("Page not found");
 		const result = page.page();
-		document.title = page.title;
+		if (document.title != page.title) {
+			document.title = page.title;
+		}
+		document.getElementById("app")!.innerHTML = "";
 		if (typeof result == "string") {
 			document.getElementById("app")!.innerHTML = result;
 		} else {
@@ -128,7 +141,9 @@ export class WaveJS {
 	static h(
 		tagName:
 			| string
-			| ((...args: (string | JSX.AttributeCollection)[]) => Element | DocumentFragment)
+			| ((
+					...args: (string | JSX.AttributeCollection)[]
+			  ) => Element | DocumentFragment)
 			| DocumentFragment,
 		attributes: JSX.AttributeCollection | null,
 		...children: string[]
@@ -145,28 +160,42 @@ export class WaveJS {
 					: document.createElement(tagName);
 
 			if (attributes == undefined) {
-				attributes = { children: ""};
+				attributes = { children: "" };
 			}
 
 			if (element instanceof HTMLElement) {
-				for (const attribue in attributes) {
-					if (attribue.startsWith("on")) {
+				for (const attribute in attributes) {
+					if (attribute == "children") continue;
+					if (attribute.startsWith("on")) {
 						element.addEventListener(
-							attribue.substring(2).toLowerCase() as keyof HTMLElementEventMap,
-							attributes[attribue] as unknown as () => void
+							attribute.substring(2).toLowerCase() as keyof HTMLElementEventMap,
+							attributes[attribute] as unknown as () => void
 						);
 					} else {
-						if (attribue === "style") {
-							let styles = "";
-							for (const style in attributes[attribue] as WJSCssClasses) {
-								// @ts-ignore it should work
-								styles += `${style}: ${attributes[attribue]![style]};`;
+						if (attribute === "style") {
+							if (typeof attributes[attribute] != "string") {
+								let styles = "";
+								for (const style in attributes[attribute] as {
+									[key: string]: string;
+								}) {
+									let styleName = "";
+									for (const char of style.split("")) {
+										if (char.toLowerCase() == char) {
+											styleName += char;
+										} else {
+											styleName += `-${char.toLowerCase()}`;
+										}
+									}
+									styles += `${styleName}: ${
+										(attributes["style"] as { [key: string]: string })![style]
+									};`;
+								}
+								attributes[attribute] = styles;
 							}
-							attributes[attribue] = styles;
 						}
 						element.setAttribute(
-							attribue.toLowerCase() === "classname" ? "class" : attribue,
-							attributes[attribue] as string
+							attribute.toLowerCase() === "classname" ? "class" : attribute,
+							attributes[attribute] as string
 						);
 					}
 				}

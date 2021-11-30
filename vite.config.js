@@ -5,6 +5,6 @@ export default defineConfig({
 		jsxInject: 'import WJS from "/src/wavejs"',
 		jsxFactory: "WJS.h",
 		jsxFragment: "WJS.f",
-		"exclude": "./src/wavejs/"
+		exclude: "./src/wavejs/",
 	},
 });

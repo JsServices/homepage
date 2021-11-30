@@ -15,7 +15,8 @@
     "noImplicitReturns": true,
 	"jsx": "react",
 	"jsxFactory": "WJS.h",
-	"jsxFragmentFactory": "WJS.f"
+	"jsxFragmentFactory": "WJS.f",
+	"experimentalDecorators": true
   },
-  "include": ["./src/pages/**.**", "./src/wavejs/**.**", "./vite-env.d.ts"]
+  "include": ["./src/pages/**.**", "./src/wavejs/**.**", "./**.d.ts"]
 }
