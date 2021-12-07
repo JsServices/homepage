@@ -49,6 +49,11 @@
   resolved "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@wave-studios/wavejs@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@wave-studios/wavejs/-/wavejs-1.0.2.tgz#088a5d5070c9dd07639bbd8445a5cfa38c3bca0f"
+  integrity sha512-Frm+4rM9vbA2zvgCJrKZJYwRYSx5w39l7LWA34wcaN6WW7okqpOyTROd4CZYpp6wtFQPgae3xx92TeUam83GEA==
+
 acorn-node@^1.6.1:
   version "1.8.2"
   resolved "https://registry.npmjs.org/acorn-node/-/acorn-node-1.8.2.tgz"
