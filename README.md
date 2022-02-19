@@ -36,4 +36,4 @@ export default class StaffCore extends React.Component {
 }
 ```
 
-There are a few minor differances, the most obvious at a glance being state management.
+There are a few minor differances, the most obvious at a glance being react hooks.
